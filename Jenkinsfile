@@ -3,13 +3,13 @@ pipeline {
     agent {
         kubernetes {
             yamlFile 'pod.yaml'
-            defaultContainer 'shell'
+            defaultContainer 'nodejs'
         }
     }
     stages {
         stage('Main') {
             steps {
-                sh 'hostname'
+                sh 'node --version'
             }
         }
     }
