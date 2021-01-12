@@ -2,7 +2,6 @@
 - name: nginx - install and start service
   hosts: all
   become: true
-  sudo_pass: anusree
   
   tasks:
   - name: install nginx using apt module
